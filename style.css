@@ -1,17 +1,24 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Mulish', sans-serif;
 }
 
 .logo{
     width:100px;
 }
 .nav-container{
-    
+    background-color: rgb(255, 255, 255);
     display:flex;
     justify-content: space-around;
     box-shadow: 0 4px 5px grey;
     padding: 10px;
+    position: fixed;
+    z-index: 10;
+    right:0;
+    left:0;
+    top:0;
+    box-shadow: 0 4px 5px grey;
 }
 .left{
     
@@ -46,6 +53,7 @@
     border-bottom:1px solid gray;
     padding-bottom: 10px;
    
+   
 }
 
 .nav-container1 > .right-half{
@@ -60,7 +68,7 @@
 .container{
     width:90vw;
     margin:auto;
-    
+    margin-top:130px;
 }
 
 /*Cards section*/
@@ -69,6 +77,8 @@
     padding:10px;
     width:260px;
     border:0.1px solid white;
+    position: relative;
+    padding-bottom: 0;
 }
 .product1{  /* card image*/
     width: 240px;
@@ -100,6 +110,7 @@
     font-size:12px;
     align-items: center;
     gap:10px;
+    color:#8A584B;
 }
 
 .cards-container{
@@ -126,3 +137,81 @@
     font: size 13px !important;
 }
 
+.card::before{
+    content: 'PROMOTED';
+    display: block;
+    /*border:2px solid goldenrod;*/
+    position: absolute;
+    background-color: black;
+    color: aliceblue;
+    padding:4px;
+    left: 2px;
+}
+
+.btn{
+    display: block;
+    border:none;
+    font-weight: bold;
+    color:blue;
+    margin:5px auto;
+    padding: 5px 0;
+    visibility: hidden;
+}
+.card:hover .btn{
+    visibility: visible;
+}
+
+/* footer section*/
+
+.gs{
+    width: 200px;
+}
+.as{
+    width: 200px;
+}
+
+.footer{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4,1fr );
+    padding:40px;
+
+}
+.footer > div{
+    display: flex;
+    flex-flow: column wrap;
+  
+    gap:5px;
+}
+
+.footer h5{
+    color:#808080;
+    margin:10px 0px;
+}
+
+.footer > div > a{
+    color:white;
+    text-decoration: none;
+
+}
+.footer img{
+    width: 180px;
+    border: 2px solid grey;
+    transition-duration: 0.5s;
+    border-radius: 10px;;
+}
+
+.footer img:hover{
+    width:200px;
+}
+
+.store{
+   
+    align-items: center;
+
+
+}
+
+.footer a:hover{
+    font-weight: bold;
+}
